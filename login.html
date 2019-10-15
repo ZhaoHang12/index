@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+</head><body>
+<canvas id="cv" width="1000" height="600"></canvas>
+<script>
+    //获取元素
+    var cv = document.getElementById('cv');
+    //获取画图对象
+    var ctx = cv.getContext('2d');
+    //线性渐变
+    var lg =   ctx.lrd = ctx.createLinearGradient(500,300,1000,600);
+    lg.addColorStop(0,'red');
+    lg.addColorStop(0.2,'orange');
+    lg.addColorStop(0.4,'green');
+    lg.addColorStop(0.5,'yellow');
+    lg.addColorStop(0.6,'blue');
+    lg.addColorStop(0.8,'cyan');
+    lg.addColorStop(1,'purple');
+    ctx.fillStyle = lg;
+    ctx.fillRect(500,300,1000,600);
+    ctx.fill();
+    /**
+     注：如果想要正确的使用渐变的效果，建义渐变的设置区域和绘制区域重合
+     */
+
+
+
+
+
+
+
+</script>
+</body>
+
+</html>
